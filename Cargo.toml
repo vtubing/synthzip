@@ -1,0 +1,22 @@
+[package]
+name = "synthzip"
+version = "0.1.0"
+edition = "2021"
+authors = ["Chris Olstrom <chris@olstrom.com>"]
+license = "MIT"
+repository = "https://github.com/vtubing/synthzip"
+documentation = "https://docs.rs/synthzip"
+description = "constructs synthetic Central Directories when missing from otherwise-valid ZIP data"
+
+[features]
+default = []
+discovery = ["logging"]
+logging = ["dep:log"]
+
+[dependencies]
+byteorder = "^ 1"
+crc32fast = "^ 1"
+derivative = "^ 2"
+flate2 = "^ 1"
+log = { version = "^ 0.4", optional = true }
+thiserror = "^ 1"
